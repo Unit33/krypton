@@ -1,9 +1,19 @@
 $(function() {
-	var $hamburger = $(".hamburger");
+	var $hamburger = $('.hamburger');
+	var $overlay = $('.main-overlay');
+	var $menu = $('.header-nav-mobile');
 	$hamburger.on("click", function (e) {
 		$hamburger.toggleClass("is-active");
+		$menu.toggleClass('visibility-hidden');
+		$overlay.toggleClass('visibility-hidden');
 	});
+		$overlay.on("click", function (e) {
+			$hamburger.toggleClass("is-active");
+			$menu.toggleClass('visibility-hidden');
+			$overlay.toggleClass('visibility-hidden');
+		});
 });
+
 
 $(document).ready(function () {
 	var stickyNavTop = $('.header-nav').offset().top;
@@ -23,7 +33,8 @@ $(document).ready(function () {
 	});
 });
 
-new WOW().init();
+
+// new WOW().init();
 
 // $("#slick1")
 // 	.replaceWith($("<div id=\"#slick1\">" + $("#slick1")[0].innerHTML + "</div>"));
@@ -33,5 +44,6 @@ new WOW().init();
 // 		$(this).replaceWith($("<div>" + this.innerHTML + "</div>"))
 // 	});
 
-$(".row-slider-list")
-	.slick();
+// $(document).ready(function () {
+// 	$('#slick2').slick();
+// });

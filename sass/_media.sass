@@ -1,31 +1,255 @@
-@import "vars"
-
-
 /*==========  Desktop First  ==========*/
 
-// ≥1200px
-+media-breakpoint-down(lg)
+@media only screen and (max-width: 1200px)
+	.container
+		max-width: 960px
 
-// ≥992px
-+media-breakpoint-down(md)
+	.header-container
+		left: 128px
 
-// ≥768px
-+media-breakpoint-down(sm)
+	.socials
+		width: 128px
+		& span
+			letter-spacing: 3px
 
-// ≥576px
-+media-breakpoint-down(xs)
+	.main-logo
+		padding: 25px 40px
+		height: 300px
+
+	.about-title-block p
+		font-size: 30px
+		line-height: 42px
+
+	.about-title-block h2
+		text-align: right
+		width: 35%
+
+@media only screen and (max-width: 1199px)
+
+	.header-container
+		left: 100px
+
+	.head-content h2
+		color: #333333
+		font-family: 'Libre Baskerville', serif
+		font-weight: 500
+		font-size: 30px
+		line-height: 1.1
+		max-width: 400px
+		position: relative
+		padding-bottom: 16px
+		margin-top: 0
+
+	.main-logo
+		padding: 15px
+		height: 240px
+
+	.socials
+		width: 100px
+		& span
+			letter-spacing: 0
+
+	.left-side h2
+		font-size: 30px
+		line-height: 42px
 
 
+@media only screen and (max-width: 1024px)
+	.main-logo
+		height: 65px
+		width: 100%
+		position: fixed
+		top: 0
+		& .desktop
+		display: none
+
+	.socials
+		display: none
+
+	.header-container
+		top: 0
+		left: 0
+		bottom: 0
+		right: 0
+
+	.header-nav
+		display: none
+
+	.header-nav-mobile
+		box-shadow: -10px 0 20px 0 #191d27
+		padding: 20px
+		box-sizing: border-box
+		display: flex
+		flex-direction: column
+		align-items: flex-start
+		width: 0
+		height: 100vh
+		flex-direction: column
+		margin-top: 0
+		width: 300px
+		position: fixed
+		z-index: 3
+		top: 0
+		right: 0
+		left: unset
+		overflow-x: hidden
+		background-color: #191d27
+		transition: all 5s linear
+
+	.nav-list-mobile
+		margin: 0
+		padding: 0
+		& li
+			margin-bottom: 20px
+			margin-right: auto
+			& a
+				font-family: 'Rubik', sans-serif
+				font-size: 15px
+				line-height: 21px
+				color: #ffffff
+
+	.nav-logo-mobile
+		margin-bottom: 20px
+
+	.hamburger
+		display: block
+		margin-right: 10px
+		z-index: 10
+
+	.nav-list
+		flex-direction: column
+		align-items: center
+		text-align: center
+
+	.mobile-nav
+		padding: 10px
+		display: flex
+		flex-direction: row
+		align-items: center
+		justify-content: space-between
+		height: 65px
+		width: 100%
+		background-color: #191d27
+		& img
+			height: 40px
+
+	.row-slider-item
+		width: 33%
+
+	.socials-list-mobile
+		flex-direction: row
+		background-color: transparent
+		order: 1
+		& li
+			margin-right: 40px
+			& .db:hover
+				fill: #ffffff
+
+	.nav-link-mobile
+		align-self: center
+		margin-top: 20px
+		margin-bottom: 20px
+
+	.header-container
+		padding-bottom: 16px
+		padding-right: 16px
+
+	.site-header
+		height: 100%
+		
+	.head-content
+		width: 65%
+		& p
+			font-size: 15px
+			line-height: 21px
+
+@media only screen and (max-width: 768px)
+	.container
+		width: calc(100%-30px)
+
+	.header-container
+		padding-bottom: 5px
+		padding-right: 5px
+		padding-left: 5px
+
+	.head-content
+		background-color: #202633
+		width: 100%
+		& h2
+			color: #ffffff
+			font-size: 22px
+			line-height: 24px
+			max-width: 100%
+			margin-bottom: 0
+			&:after
+				display: none
+		& p
+			color: #ffffff
+			margin-top: 0
+			font-size: 15px
+			line-height: 24px
+
+	.about-title-block
+		align-items: flex-start
+		flex-direction: column
+		& h2
+			text-align: left
+			width: 45%
+			order: -1
+			margin-top: 40px
+		& p
+			font-size: 20px
+			line-height: 28px
+			width: 100%
+
+	.about-descr
+		flex-direction: column
+		& p
+			font-size: 15px
+			line-height: 20px
+			color: #d2d4da
+
+	.about-text
+		width: 100%
+		margin-right: 15px
+
+	.about-future
+		flex-direction: column
+
+	.office-work
+		width: 100%
+
+	.decor-block
+		display: none
+
+	.technologies-features
+		width: 100%
+
+	.row-slider-item
+		width: 100%
+
+	.feedback
+		padding-top: 50px
+
+	.feedback-container
+		flex-direction: column
+
+	.left-side
+		width: 100%
+		& h2
+			font-size: 20px
+			line-height: 28px
+			margin-bottom: 30px
+		& ul
+			margin-bottom: 40px
+
+	.right-side
+		width: 100%
+		flex-direction: column
+		& form input
+			width: 100%
+		& form button
+			width: 100%
+			margin-right: 0
 /*==========  Mobile First  ==========*/
 
-// ≤576px
-+media-breakpoint-up(sm)
-
-// ≤768px
-+media-breakpoint-up(md)
-
-// ≤992px
-+media-breakpoint-up(lg)
-
-// ≤1200px
-+media-breakpoint-up(xl)
